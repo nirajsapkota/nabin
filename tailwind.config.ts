@@ -8,6 +8,11 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Helvetica", "Arial", "sans-serif"],
+        inter: "var(--font-inter)",
+        "pp-neue-montreal": "var(--font-pp-neue-montreal)",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

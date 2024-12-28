@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MenuIcon } from "@/app/assets/menu-icon";
+import { MenuIcon } from "@/app/assets/icons/menu-icon";
 import { MobileNavigation, Navigation } from "@/app/components/navigation";
 
 export default function Header() {
