@@ -6,5 +6,5 @@ export type ProjectDetails = {
         src: string;
         alt: string;
     };
-    description: string[];
+    description: string;
 };

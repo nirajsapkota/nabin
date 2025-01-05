@@ -1,7 +1,8 @@
 import "./globals.css";
 import localFont from "next/font/local";
-import Header from "./components/header";
 import type { Metadata } from "next";
+import Link from "next/link";
+import Navigation from "./components/navigation";
 
 // Note: The inter used by the designer appears to be different to the one from the google fonts library.
 const inter = localFont({
@@ -40,10 +41,39 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`font-sans p-6 max-w-7xl mx-auto ${inter.variable} ${ppNeueMontreal.variable}`}
+                className={`font-sans ${inter.variable} ${ppNeueMontreal.variable}`}
             >
-                <Header />
-                {children}
+                <div className="p-6 max-w-7xl mx-auto ">
+                    <Navigation />
+                    {children}
+                </div>
+                <div className="flex flex-col items-center bg-[#1E1E1E] p-6">
+                    <div className="w-full flex flex-col items-center max-w-7xl">
+                        <div className="flex w-full items-center gap-x-4 mt-2 mb-8">
+                            <Link
+                                href="#"
+                                className="font-bold flex justify-center w-1/2 py-4 text-white border-2 border-white rounded-full"
+                            >
+                                LINKEDIN
+                            </Link>
+                            <Link
+                                href="#"
+                                className="font-bold flex justify-center w-1/2 py-4 text-white border-2 border-white rounded-full"
+                            >
+                                CONTACT ME
+                            </Link>
+                        </div>
+                        <div className="w-11/12 mb-12">
+                            <p className="text-white text-right">
+                                <span className="text-[#7A7A7A]">
+                                    Design by{" "}
+                                </span>
+                                Nabin Sapkota
+                                <br />© 2022
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </body>
         </html>
     );
