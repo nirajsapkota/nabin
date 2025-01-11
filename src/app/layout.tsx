@@ -6,6 +6,7 @@ import Navigation from "./components/navigation";
 import { Dynalight } from "next/font/google";
 
 const dynalight = Dynalight({
+    subsets: ["latin"],
     weight: "400",
     variable: "--font-dynalight",
 });
