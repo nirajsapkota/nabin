@@ -11,6 +11,8 @@ export default {
       fontFamily: {
         sans: ["Helvetica", "Arial", "sans-serif"],
         inter: "var(--font-inter)",
+        dynalight: "var(--font-dynalight)",
+        helvetica: "var(--font-helvetica)",
         "pp-neue-montreal": "var(--font-pp-neue-montreal)",
       },
       colors: {

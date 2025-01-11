@@ -7,6 +7,7 @@ import VerticalCircle from "../../public/icons/vertical-circle.svg";
 import BurstCircle from "../../public/icons/burst-circle.svg";
 import SpokedCircle from "../../public/icons/spoked-circle.svg";
 import Phone from "../../public/icons/phone.svg";
+import BackToTop from "../../public/icons/back-to-top.svg";
 
 import Image from "next/image";
 
@@ -49,26 +50,25 @@ const projects: ProjectDetails[] = [
 export default function Home() {
     return (
         <div>
-            <div className="flex justify-between mt-20">
+            <div className="flex justify-between mt-16">
                 <Image
                     src={Phone}
                     alt="Phone"
                     className="hidden md:block w-[207px] h-[428px]"
                 />
-
                 <div className="md:w-7/12">
-                    <h1 className="text-4xl">
+                    <h1 className="font-helvetica text-[43px] md:text-[48px] leading-[.85] -tracking-[3]">
                         thoughtful designs,
                         <br />
                         beautiful results
                     </h1>
                     <br />
-                    <p className="w-2/3 md:w-full md:text-[28px]">
+                    <p className="font-helvetica font-light w-5/6 md:w-full text-[21px] md:text-[28px]">
                         I believe good design feels natural—guiding without
                         overwhelming, solving without complicating.
                     </p>
                     <br />
-                    <p className="w-2/3 md:w-full md:text-[28px]">
+                    <p className="font-helvetica font-light w-5/6 md:w-full text-[21px] md:text-[28px]">
                         My work is about listening closely, simplifying
                         thoughtfully, and crafting experiences that resonate.
                         Every project is an opportunity to learn, adapt, and
@@ -78,7 +78,7 @@ export default function Home() {
             </div>
 
             <div className="flex my-24">
-                <Image src={Phone} alt="Phone" className="mr-20 md:hidden" />
+                <Image src={Phone} alt="Phone" className="mr-6 md:hidden" />
                 <div className="flex flex-col justify-evenly md:flex-row md:w-full md:justify-between">
                     <div className="flex items-center">
                         <Image
@@ -86,7 +86,9 @@ export default function Home() {
                             alt="simplistic"
                             className="mr-4"
                         />
-                        <p className="text-2xl underline">simplistic</p>
+                        <p className="font-dynalight italic text-[50px] lg:text-[68px]">
+                            simplistic
+                        </p>
                     </div>
                     <div className="flex items-center">
                         <Image
@@ -94,7 +96,9 @@ export default function Home() {
                             alt="cohesive"
                             className="mr-4"
                         />
-                        <p className="text-2xl underline">cohesive</p>
+                        <p className="font-dynalight italic text-[50px] lg:text-[68px]">
+                            cohesive
+                        </p>
                     </div>
                     <div className="flex items-center">
                         <Image
@@ -102,7 +106,9 @@ export default function Home() {
                             alt="memorable"
                             className="mr-4"
                         />
-                        <p className="text-2xl underline">memorable</p>
+                        <p className="font-dynalight italic text-[50px] lg:text-[68px]">
+                            memorable
+                        </p>
                     </div>
                 </div>
             </div>
@@ -119,12 +125,28 @@ export default function Home() {
                 <Project key={index} project={project} />
             ))}
 
-            <div className="bg-black h-1 my-16"></div>
+            <div className="my-32">
+                <div className="bg-black h-[2px] mb-4"></div>
+                <div className="items-center justify-between hidden md:flex">
+                    <div>© 2025</div>
+                    <div className="flex items-center justify-center gap-x-4">
+                        <div>BACK TO TOP</div>
+                        <Image
+                            src={BackToTop}
+                            className="cursor-pointer"
+                            alt="Back to top"
+                            onClick={() => window.scrollTo(0, 0)}
+                        />
+                    </div>
+                </div>
+            </div>
 
-            <h2 className="mb-14">
+            <h2 className="font-helvetica text-[25px] mb-14">
                 have a project in mind?
                 <br />
-                <span className="text-4xl">LET&apos;S TALK</span>
+                <span className="text-[70px] md:text-[130px] lg:text-[170px] xl:text-[216px] leading-[.95]">
+                    LET&apos;S TALK
+                </span>
             </h2>
         </div>
     );
